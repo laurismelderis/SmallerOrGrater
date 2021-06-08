@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SmallerOrGreater</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="main-menu">
+		<div id="main-menu-head">
+			<h1>Smaller or greater</h1>
+			<h2>Select mode:</h2>
+		</div>
+		<div id="main-menu-body">
+			<button type="button" id="pvpBtn" onclick="switchMode(this.id)">Player vs Player</button>
+			<button type="button" id="pvcBtn" onclick="switchMode(this.id)">Player vs Computer</button>
+			<button type="button" id="cvpBtn" onclick="switchMode(this.id)">Computer vs Player</button>
+			<button type="button" id="cvcBtn" onclick="switchMode(this.id)">Computer vs Computer</button>
+			<button type="button" id="rulesBtn" onclick="switchMode(this.id)">Rules</button>
+		</div>
+	</div>
+	<div id="pvp-mode" class="mode">
+		<h1>Player vs Player</h1>
+		<p>(Click in canvas to move)</p>
+		<canvas id="pvp-canvas" tabindex="1"></canvas>
+		<button type="button" class="restartPVP">Restart</button>
+		<button type="button" class="menuBtn" onclick="switchMode(this.class)">Return to main menu</button>
+	</div>
+	<div id="pvc-mode" class="mode">
+		<h1>Player vs Computer</h1>
+		<p>(Click in canvas to move)</p>
+		<canvas id="pvc-canvas" tabindex="1"></canvas>
+		<button type="button" class="restartPVP">Restart</button>
+		<button type="button" class="menuBtn" onclick="switchMode(this.class)">Return to main menu</button>
+	</div>
+	<div id="cvp-mode" class="mode">
+		<h1>Computer vs Player</h1>
+		<p>(Click in canvas to move)</p>
+		<canvas id="cvp-canvas" tabindex="1"></canvas>
+		<button type="button" class="restartPVP">Restart</button>
+		<button type="button" class="menuBtn" onclick="switchMode(this.class)">Return to main menu</button>
+	</div>
+	<div id="cvc-mode" class="mode">
+		<h1>Computer vs Computer</h1>
+		<p>(Click in canvas to move)</p>
+		<p>(Press enter to make the AI to make a move)</p>
+		<canvas id="cvc-canvas" tabindex="1"></canvas>
+		<input type="text" id="cvc-len" placeholder="Max 13">
+		<button type="button" id="cvc-len-btn">Change number string length</button>
+		<button type="button" class="restartPVP">Restart</button>
+		<button type="button" class="menuBtn" onclick="switchMode(this.class)">Return to main menu</button>
+	</div>
+	<div id="rules-mode" class="mode">
+		<h1>Rules</h1>
+		<p>Spēles sākumā ir dota skaitļu virkne, kura sastāv vismaz no 5 cipariem. Spēlētāji izpilda gājienus pēc kārtas.<br> Gājiena laikā skaitļu virkne tiek apskatīta no kreisās puses uz labo pusi un tajā var aizvietot jebkuru divu blakusstāvošo skaitļu kombināciju,pamatojoties uz šādiem nosacījumiem:<br>
+		<ul>
+			<li>ja divu blakusstāvošu skaitļu summa ir lielāka par 7, tad to aizvieto ar 1;</li>
+			<li>ja skaitļu summa ir mazāka par 7, tad to aizvieto ar 3;</li>
+			<li>ja summa ir vienāda ar 7, tad to aizvieto ar 2.</li>
+		</ul>
+		 Spēle beidzas, kad virknē paliek divi skaitļi:
+		 <ul>
+			<li>ja pirmais skaitlis ir lielāks nekā otrais, tad uzvar spēlētājs, kurš uzsāka spēli;</li>
+			<li>ja otrais skaitlis ir lielāks nekā pirmais skaitlis, tad uzvar otrais spēlētājs;</li>
+			<li>ja skaitļi ir vienādi, tad rezultāts ir neizšķirts.</li>
+		</ul>
+		<b>Uzsākot spēli ir obligāti jāieklikšķina kanvas elementā jeb spēles logā. Ja ir dota iespēja jums pārvietoties, tad to var izdarīt <i>ar bultiņu pa kreisi vai pa labi</i>.</b>
+		</p>
+		<button type="button" class="menuBtn" onclick="switchMode(this.class)">Return to main menu</button>
+	</div>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="rectangle.js"></script>
+	<script type="text/javascript" src="game.js"></script>
+	<script type="text/javascript" src="gameModes/pvp.js"></script>
+	<script type="text/javascript" src="gameModes/pvc.js"></script>
+	<script type="text/javascript" src="gameModes/cvp.js"></script>
+	<script type="text/javascript" src="gameModes/cvc.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="connector.js"></script>
+</body>
+</html>

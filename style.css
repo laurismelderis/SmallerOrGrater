@@ -1,0 +1,81 @@
+body {
+	margin: 0;
+}
+
+canvas {
+	width: 800px;
+	height: 500px;
+	border: 20px solid #16cec1;
+	border-radius: 16px;
+}
+
+#main-menu{
+	text-align: center;
+	font-family: Arial;
+}
+
+input {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 16px;
+	width: 250px;
+	border-radius: 8px;
+}
+
+button{
+	background-color: #16cec1;
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px auto;
+	border-radius: 8px;
+	width: 250px;
+	cursor: pointer;
+	display: block;
+}
+
+button:hover {
+	background-color: #FFcec1;
+}
+
+.mode {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: Arial;
+}
+
+#pvp-mode {
+	display: none;
+}
+
+#pvc-mode {
+	display: none;
+}
+
+#cvp-mode {
+	display: none;
+}
+
+#cvc-mode {
+	display: none;
+}
+
+#change-name-mode {
+	display: none;
+}
+
+#rules-mode {
+	display: none;
+	width: 80%;
+	text-align: left;
+}
+
+#rules-mode h1{
+	text-align: center;
+}
